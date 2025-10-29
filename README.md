@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Refonte Portfolio – Patrick Aimé Kouassi
 
-## Getting Started
+Bienvenue sur le portfolio de Patrick Aimé Kouassi, développeur web et mobile.
 
-First, run the development server:
+Ce projet met en avant mes compétences, expériences et réalisations à travers une interface moderne, responsive et animée, développée avec Next.js, React, TypeScript et Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Fonctionnalités principales
+
+- **Navigation fluide** avec menu fixe et surbrillance automatique de la section active
+- **Sections modulaires** : À propos, Services, Projets, Expériences, Contact
+- **Animations et transitions** pour une expérience utilisateur dynamique
+- **Responsive** : design adapté à tous les écrans
+- **Mode sombre/clair** (En cours)
+
+## 🛠️ Technologies utilisées
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Flaticon](https://www.flaticon.com/fr/)
+- [slick-carousel](https://kenwheeler.github.io/slick/) (pour le carousel des stacks)
+- [resend](https://resend.com/) (pour le carousel des stacks)
+- [react-hot-toast](https://react-hot-toast.com/) (pour les alerts)
+
+## 📁 Structure du projet
+
+```
+├── app/
+│   ├── globals.css           # Styles globaux
+│   ├── layout.tsx            # Layout principal
+│   ├── page.tsx              # Page d'acceuil'
+│   ├── projects/             # Page des projets
+│   └── api/                  # Fonction api pour l'envoi de mail
+├── components/               # Composants réutilisables
+│   ├── home/                 # Composants de la Home page (About, Services, Projects, Experience, Contactr)
+│   └── ui/                   # Composants UI réutilisables
+├── hooks/                    # Hooks personnalisés
+├── lib/
+│   └── utils.ts              # Fonctions utilitaires
+├── public/
+│   └── images/               # Images du portfolio et des projets
+├── utils/
+│   ├── data.js               # Données statics
+│   └── routes.js             # Routes
+├── package.json              # Dépendances et scripts
+├── tailwind.config.ts        # Configuration Tailwind
+├── tsconfig.json             # Configuration TypeScript
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Installation & Lancement
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Cloner le repo**
+   ```bash
+   git clone https://github.com/pat56-hp/refonte-portfolio.git
+   cd refonte-portfolio
+   ```
+2. **Installer les dépendances**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+3. **Lancer le serveur de développement**
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+4. **Accéder à l'application**
+   Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Personnalisation
 
-## Learn More
+- Modifiez les données dans `utils/data.js` pour adapter le contenu (projets, skills, about, etc.).
+- Les images de projets sont à placer dans `public/images/`.
 
-To learn more about Next.js, take a look at the following resources:
+## 🖥️ Déploiement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Le projet est prêt pour un déploiement sur [Vercel](https://vercel.com/) ou toute plateforme compatible Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Poussez votre code sur GitHub
+2. Connectez le repo à Vercel
+3. Déployez en un clic
 
-## Deploy on Vercel
+## 👤 Auteur
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Patrick Aimé Kouassi**  
+Développeur Web & Mobile  
+[LinkedIn](https://linkedin.com/in/Patrick-aime)  
+[Email](mailto:patrickkouassi7@gmail.com)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+> Ce portfolio est open source. N'hésitez pas à le forker, l'adapter ou me contacter pour toute collaboration !
