@@ -24,6 +24,17 @@ export const metadata = {
   description:
     "Bienvenue sur le portfolio de Patrick Aimé Kouassi, développeur web & mobile.",
   generator: "Patrick Aimé Kouassi",
+  icons: {
+    icon: [
+      { url: "/images/favicon/favicon.ico" },
+      { url: "/images/favicon/favicon.svg", type: "image/svg+xml" },
+      {
+        url: "/images/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+        rel: "apple-touch-icon",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
