@@ -14,7 +14,6 @@ const FROM_EMAIL = "onboarding@resend.dev";
 export async function POST(req) {
   try {
     const { name, email, subject, message } = await req.json();
-
     await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,
