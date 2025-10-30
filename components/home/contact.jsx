@@ -7,6 +7,7 @@ import Input from "../ui/input";
 import Textarea from "../ui/textarea";
 import Button from "../ui/button";
 import toast from "react-hot-toast";
+import { socials } from "@/utils/data";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -65,53 +66,63 @@ export default function Contact() {
         <div className="flex lg:flex-row flex-col-reverse justify-between lg:gap-25 gap-6">
           <div className="flex lg:flex-col flex-row flex-wrap gap-4">
             <RsItem
+              href={socials.facebook.link}
               classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
-              classIconParent="!bg-white w-10 h-10 group-hover:border group-hover:border-primary"
-              icon={<Facebook className="w-5 h-5" />}
+              classIconParent="!bg-white group-hover:border group-hover:border-primary"
+              icon={socials.facebook.icon}
             >
               <span className="group-hover:underline flex-1">
-                /patrick.aime.714
+                {socials.facebook.label}
               </span>
             </RsItem>
             <RsItem
+              href={socials.twitter.link}
               classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
-              classIconParent="!bg-white w-10 h-10 group-hover:border group-hover:border-primary"
-              icon={<Twitter className="w-5 h-5" />}
-            >
-              <span className="group-hover:underline flex-1">@ParkeurH</span>
-            </RsItem>
-            <RsItem
-              classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
-              classIconParent="!bg-white w-10 h-10 group-hover:border group-hover:border-primary"
-              icon={<Linkedin className="w-5 h-5" />}
+              classIconParent="!bg-white group-hover:border group-hover:border-primary"
+              icon={socials.twitter.icon}
             >
               <span className="group-hover:underline flex-1">
-                /in/Patrick-aime
+                {socials.twitter.label}
               </span>
             </RsItem>
             <RsItem
+              href={socials.linkedin.link}
               classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
-              classIconParent="!bg-white w-10 h-10 group-hover:border group-hover:border-primary"
-              icon={<Github className="w-5 h-5" />}
-            >
-              <span className="group-hover:underline flex-1">@Pat56-hp</span>
-            </RsItem>
-            <RsItem
-              classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
-              classIconParent="!bg-white w-10 h-10 group-hover:border group-hover:border-primary"
-              icon={<i className="fi fi-rr-marker text-sm" />}
+              classIconParent="!bg-white group-hover:border group-hover:border-primary"
+              icon={socials.linkedin.icon}
             >
               <span className="group-hover:underline flex-1">
-                Abidjan, Côte d’Ivoire
+                {socials.linkedin.label}
               </span>
             </RsItem>
             <RsItem
+              href={socials.github.link}
               classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
-              classIconParent="!bg-white w-10 h-10 group-hover:border group-hover:border-primary"
-              icon={<i className="fi fi-rr-phone-call text-sm" />}
+              classIconParent="!bg-white group-hover:border group-hover:border-primary"
+              icon={socials.github.icon}
             >
               <span className="group-hover:underline flex-1">
-                (225) 07 083 777 51
+                {socials.github.label}
+              </span>
+            </RsItem>
+            <RsItem
+              href={socials.address.link}
+              classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
+              classIconParent="!bg-white group-hover:border group-hover:border-primary"
+              icon={socials.address.icon}
+            >
+              <span className="group-hover:underline flex-1">
+                {socials.address.label}
+              </span>
+            </RsItem>
+            <RsItem
+              href={socials.phone.link}
+              classParent="!gap-2 sm:!gap-5 hover:text-foreground group"
+              classIconParent="!bg-white group-hover:border group-hover:border-primary"
+              icon={socials.phone.icon}
+            >
+              <span className="group-hover:underline flex-1">
+                {socials.phone.label}
               </span>
             </RsItem>
           </div>
@@ -147,9 +158,18 @@ export default function Contact() {
                 className="bg-secondary-foreground border border-primary rounded-sm px-4 py-3 placeholder:text-muted focus:outline-none focus:ring-1 focus:ring-primary"
               >
                 <option value="">Sélectionner un objet</option>
-                <option value="demande">Demande</option>
-                <option value="reclamation">Réclamation</option>
-                <option value="autre">Autre</option>
+                <option value="Site Web">Site Web</option>
+                <option value="Application Web">Application Web</option>
+                <option value="Application Mobile">Application Mobile</option>
+                <option value="Application Mobile">Application Mobile</option>
+                <option value="Déploiement / Intégration">
+                  Déploiement / Intégration
+                </option>
+                <option value="Solution Saas">Solution Saas</option>
+                <option value="Maintenance Applicationtive">
+                  Maintenance Applicationtive
+                </option>
+                <option value="Autre">Autre</option>
               </select>
             </div>
             <div className="grid gap-1">

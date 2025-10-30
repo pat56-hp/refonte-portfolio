@@ -1,3 +1,9 @@
+import { Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Github } from "lucide-react";
+import { Twitter } from "lucide-react";
+import { Facebook } from "lucide-react";
+
 const skills = [
   { name: "JavaScript", image: "/images/skills/javascript.svg" },
   { name: "Jquery", image: "/images/skills/jquery.svg" },
@@ -289,4 +295,43 @@ const projects = [
   },
 ];
 
-export { skills, experiences, projectTypes, projects };
+//Reseaux
+const socials = {
+  facebook: {
+    icon: <Facebook className="w-4 h-4" />,
+    link: "https://facebook.com/patrick.aime.714",
+    label: "/patrick.aime.714",
+  },
+  twitter: {
+    icon: <Twitter className="w-4 h-4" />,
+    link: "https://x.com/parkeurH",
+    label: "@ParkeurH",
+  },
+  linkedin: {
+    icon: <Linkedin className="w-4 h-4" />,
+    link: "https://linkedin.com/in/patrick-aime",
+    label: "/in/Patrick-aime",
+  },
+  github: {
+    icon: <Github className="w-4 h-4" />,
+    link: "https://github.com/pat56-hp",
+    label: "@Pat56-hp",
+  },
+  address: {
+    icon: <i className="fi fi-rr-marker text-xs" />,
+    link: "#",
+    label: "Abidjan, Côte d’Ivoire",
+  },
+  phone: {
+    icon: <i className="fi fi-rr-phone-call text-xs" />,
+    link: "tel:002250708377751",
+    label: "(225) 07 083 777 51",
+  },
+  mail: {
+    icon: <Mail className="w-5 h-5" />,
+    link: "mailto:patrickkouassi7@gmail.com",
+    label: "patrickkouassi7@gmail.com",
+  },
+};
+
+export { skills, experiences, projectTypes, projects, socials };

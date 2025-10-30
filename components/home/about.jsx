@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Skeleton } from "../ui/skeleton";
 import Button from "../ui/button";
 import Carousel from "../carousel";
-import { skills } from "@/utils/data";
+import { skills, socials } from "@/utils/data";
 import Link from "next/link";
 
 const About = () => {
@@ -33,10 +33,10 @@ const About = () => {
             />
           </div>
           <div className="flex gap-4">
-            <RsItem icon={<Facebook className="w-4 h-4" />} />
-            <RsItem icon={<Twitter className="w-4 h-4" />} />
-            <RsItem icon={<Linkedin className="w-4 h-4" />} />
-            <RsItem icon={<Mail className="w-4 h-4" />} />
+            <RsItem href={socials.facebook.link} icon={socials.facebook.icon} />
+            <RsItem href={socials.linkedin.link} icon={socials.linkedin.icon} />
+            <RsItem href={socials.mail.link} icon={socials.mail.icon} />
+            <RsItem href={socials.phone.link} icon={socials.phone.icon} />
           </div>
           <div className="flex gap-2 leading-none">
             <i className="fi fi-rr-marker text-xs"></i>
