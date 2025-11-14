@@ -81,7 +81,7 @@ export default function Header() {
         <div
           className={`lg:flex items-center ${
             scrolled
-              ? "justify-center !gap-10 px-15 py-2 bg-foreground text-white border border-primary rounded-full shadow-lg"
+              ? "justify-center gap-10 px-15 py-2 bg-foreground text-white border border-primary rounded-full shadow-lg"
               : "justify-between flex-1"
           } gap-2`}
         >

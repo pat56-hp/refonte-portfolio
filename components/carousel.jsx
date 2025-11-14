@@ -14,34 +14,56 @@ import {
 export default function Carousel({ images }) {
   const settings = {
     dots: false,
-    infinite: true,
+    /* infinite: true,
     speed: 6000,
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: true,
-    arrows: false,
+    arrows: false, */
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    /* responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 4 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 480,
+        settings: { slidesToShow: 2 },
+      },
+    ], */
     responsive: [
       {
-        breakpoint: 1024, // <= 1024px
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768, // <= 768px (tablettes)
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
         },
       },
       {
-        breakpoint: 480, // <= 480px (mobiles)
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -49,7 +71,7 @@ export default function Carousel({ images }) {
   };
 
   return (
-    <div className="w-full overflow-hidden mx-auto py-10 z-30">
+    <div className="w-full overflow-hidden mx-auto py-10 z-30 slider-container">
       <Slider {...settings}>
         {images.map((image, i) => (
           <div key={i} className="flex justify-center focus:outline-none">

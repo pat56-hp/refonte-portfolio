@@ -61,6 +61,19 @@ const projectTypes = ["web", "ui/ux", "mobile"];
 //Projects
 const projects = [
   {
+    label: "Refonte Portfolio",
+    client: "Personnel",
+    type: ["web", "ui/ux"],
+    images: {
+      web: ["/images/projects/portfolio/capture1.png"],
+      "ui/ux": ["/images/projects/portfolio/capture1.png"],
+    },
+    skills: ["NextJs", "TailwindCss", "Git / Github", "Figma"],
+    link: "https://patrick-aime.vercel.app/",
+    description:
+      "Refonte complète de mon portfolio avec un design UI/UX modernisé, plus fluide et entièrement responsive. J’ai ajouté un format mobile optimisé, des polices plus modernes et une page dédiée à mes projets. La nouvelle version inclut également un bouton de prise de rendez-vous pour faciliter le contact.",
+  },
+  {
     label: "Refonte Hesed",
     client: "Hesed Organization",
     type: ["web", "ui/ux"],
