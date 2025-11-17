@@ -107,7 +107,17 @@ export default function ProjectItem({ project, lineDesc = 5 }) {
             </Link>
           </div>
           <p
-            className={`line-clamp-none md:line-clamp-${lineDesc} text-xs transition-all duration-300 hover:line-clamp-none`}
+            className={`text-xs transition-all duration-300 hover:line-clamp-none ${
+              lineDesc === 1
+                ? "md:line-clamp-1"
+                : lineDesc === 2
+                ? "md:line-clamp-2"
+                : lineDesc === 3
+                ? "md:line-clamp-3"
+                : lineDesc === 4
+                ? "md:line-clamp-4"
+                : "md:line-clamp-5"
+            }`}
           >
             {project.description}
           </p>
