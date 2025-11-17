@@ -14,7 +14,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   return (
-    <section className="grid gap-y-30 relative" id="about">
+    <section className="grid sm:gap-y-30 gap-y-10 relative" id="about">
       <div className="relative flex flex-col md:flex-row justify-center md:gap-15 lg:gap-20 gap-10 lg:w-220 mx-auto z-30">
         <div className="flex flex-col items-center gap-y-5 z-30">
           <div className="rounded-full border border-primary h-60 w-60 p-2 overflow-hidden">

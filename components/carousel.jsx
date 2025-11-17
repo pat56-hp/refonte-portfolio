@@ -14,7 +14,7 @@ import {
 export default function Carousel({ images }) {
   const settings = {
     dots: false,
-    /* infinite: true,
+    infinite: true,
     speed: 6000,
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -22,42 +22,22 @@ export default function Carousel({ images }) {
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: true,
-    arrows: false, */
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    /* responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 2 },
-      },
-    ], */
+    arrows: false,
+    adaptiveHeight: true,
+    centerMode: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -71,20 +51,22 @@ export default function Carousel({ images }) {
   };
 
   return (
-    <div className="w-full overflow-hidden mx-auto py-10 z-30 slider-container">
+    <div className="overflow-hidden relative w-full max-w-full py-10 z-30">
       <Slider {...settings}>
         {images.map((image, i) => (
-          <div key={i} className="flex justify-center focus:outline-none">
+          <div key={i} className="flex justify-center">
             <TooltipProvider delayDuration={100}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Image
-                    src={image.image}
-                    alt={image.name}
-                    width={64}
-                    height={64}
-                    className="object-contain w-16 h-16 hover:cursor-pointer"
-                  />
+                  <div className="flex justify-center max-w-[100px]">
+                    <Image
+                      src={image.image}
+                      alt={image.name}
+                      width={64}
+                      height={64}
+                      className="object-contain w-16 h-16 hover:cursor-pointer"
+                    />
+                  </div>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p className="text-sm font-medium">{image.name}</p>
