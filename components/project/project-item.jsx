@@ -107,7 +107,7 @@ export default function ProjectItem({ project, lineDesc = 5 }) {
             </Link>
           </div>
           <p
-            className={`line-clamp-4 md:line-clamp-${lineDesc} text-xs transition-all duration-300 hover:line-clamp-none`}
+            className={`line-clamp-none md:line-clamp-${lineDesc} text-xs transition-all duration-300 hover:line-clamp-none`}
           >
             {project.description}
           </p>
